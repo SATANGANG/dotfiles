@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?php
+
+// prettify json from text
+// example:
+// echo 'request {"foo": 1, "bar": true}, response {"foo":"bar","baz":[1, 2, 3]}' | php jsonpretify.php
+// output:
+// request {
+//    "foo": 1,
+//    "bar": true
+//}, response {
+//    "foo": "bar",
+//    "baz": [
+//        1,
+//        2,
+//        3
+//    ]
+//}
+
+$pattern = '
+/
+\{              # { character
+    (?:         # non-capturing group
+        [^{}]   # anything that is not a { or }
+        |       # OR
+        (?R)    # recurses the entire pattern
+    )*          # previous group zero or more times
+\}              # } character
+/x
+';
+
+while($line = fgets(STDIN)){
+    echo preg_replace_callback($pattern, function ($matches) {
+        $string = $matches[0];
+        $json = json_decode($string, true);
+        return (json_last_error() == JSON_ERROR_NONE) 
+            ? json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) 
+            : $sting;
+    }, $line);
+}

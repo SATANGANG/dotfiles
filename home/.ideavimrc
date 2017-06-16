@@ -1,0 +1,10 @@
+set clipboard=unnamed
+set scrolloff=1
+set showmode
+
+set incsearch
+set ignorecase 
+set smartcase
+
+" https://youtrack.jetbrains.com/issue/VIM-769
+set surround
