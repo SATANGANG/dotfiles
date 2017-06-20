@@ -17,7 +17,7 @@ zsh: ## install oh-my-zsh
 	test -d ${HOME}/.oh-my-zsh || git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
 	test -d ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions || git clone git://github.com/zsh-users/zsh-autosuggestions ${HOME}/.oh-my-zsh/plugins/zsh-autosuggestions
 	ln -vsf ${PWD}/home/.zshrc   ${HOME}/.zshrc
-	ln -vsf ${PWD}/ohmyzsh/config.zsh   ${HOME}/.oh-my-zsh/custom/config.zsh
+	ln -vsf ${PWD}/ohmyzsh/config.zsh  ${HOME}/.oh-my-zsh/custom/config.zsh
 
 etc: ## install etc
 ifeq ($(UNAME),Darwin)

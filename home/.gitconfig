@@ -4,6 +4,7 @@
 	smudge = git media smudge %f
 [user]
 	name = ezprit
+	email = ezprit@gmail.com
 [core]
 	excludesfile = ~/.gitignore
 [alias]
