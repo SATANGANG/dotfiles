@@ -22,6 +22,7 @@ zsh: ## install oh-my-zsh
 etc: ## install etc
 ifeq ($(UNAME),Darwin)
 	ln -vsf ${PWD}/etc/vhosts.conf /usr/local/etc/nginx/conf.d/vhosts.conf
+	ln -vsf ${PWD}/etc/local.conf /usr/local/etc/dovecot/local.conf
 endif
 ifeq ($(UNAME),Linux)
 endif
