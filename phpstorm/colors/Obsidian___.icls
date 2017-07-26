@@ -1,7 +1,7 @@
 <scheme name="Obsidian+++" version="142" parent_scheme="Default">
-  <option name="FONT_SCALE" value="1.25" />
+  <option name="FONT_SCALE" value="1.5" />
   <option name="LINE_SPACING" value="1.2" />
-  <option name="EDITOR_FONT_SIZE" value="14" />
+  <option name="EDITOR_FONT_SIZE" value="17" />
   <option name="CONSOLE_LINE_SPACING" value="1.0" />
   <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
   <colors>
@@ -436,6 +436,12 @@
         <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
+    <option name="GOTO_LABEL">
+      <value>
+        <option name="FOREGROUND" value="dddee0" />
+        <option name="BACKGROUND" value="202020" />
+      </value>
+    </option>
     <option name="HTML_ATTRIBUTE_NAME">
       <value>
         <option name="FOREGROUND" value="7cc1f0" />
@@ -584,11 +590,22 @@
         <option name="FOREGROUND" value="ff7772" />
       </value>
     </option>
+    <option name="MAGIC_MEMBER_ACCESS">
+      <value>
+        <option name="FOREGROUND" value="fdcc22" />
+        <option name="FONT_TYPE" value="3" />
+      </value>
+    </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="ff6666" />
         <option name="BACKGROUND" value="0" />
         <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="NOT_USED_ELEMENT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="c3c3c3" />
       </value>
     </option>
     <option name="PHP_BAD_CHARACTER">
@@ -641,6 +658,11 @@
         <option name="FOREGROUND" value="b2d78b" />
       </value>
     </option>
+    <option name="PHP_PREDEFINED SYMBOL">
+      <value>
+        <option name="FOREGROUND" value="7cc1f0" />
+      </value>
+    </option>
     <option name="PHP_SCRIPTING_BACKGROUND">
       <value>
         <option name="EFFECT_TYPE" value="1" />
@@ -661,6 +683,12 @@
     <option name="PHP_VAR">
       <value>
         <option name="FOREGROUND" value="b2d78b" />
+      </value>
+    </option>
+    <option name="PHP_VAR_VAR">
+      <value>
+        <option name="FOREGROUND" value="fdcc22" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="REGEXP.CHAR_CLASS">
