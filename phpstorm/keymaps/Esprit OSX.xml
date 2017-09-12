@@ -38,6 +38,12 @@
   <action id="EditSource">
     <keyboard-shortcut first-keystroke="meta down" />
   </action>
+  <action id="EditorDecreaseFontSize">
+    <keyboard-shortcut first-keystroke="ctrl minus" />
+  </action>
+  <action id="EditorIncreaseFontSize">
+    <keyboard-shortcut first-keystroke="ctrl equals" />
+  </action>
   <action id="EditorLineEnd">
     <keyboard-shortcut first-keystroke="end" />
     <keyboard-shortcut first-keystroke="meta right" />
@@ -45,6 +51,9 @@
   <action id="EditorLineStart">
     <keyboard-shortcut first-keystroke="home" />
     <keyboard-shortcut first-keystroke="meta left" />
+  </action>
+  <action id="EditorResetFontSize">
+    <keyboard-shortcut first-keystroke="ctrl 0" />
   </action>
   <action id="FileChooser.GotoModule" />
   <action id="FileChooser.GotoProject" />
@@ -58,6 +67,7 @@
     <keyboard-shortcut first-keystroke="meta a" />
     <keyboard-shortcut first-keystroke="ctrl a" />
   </action>
+  <action id="GotoBookmark0" />
   <action id="Jdbc.OpenTableEditor">
     <keyboard-shortcut first-keystroke="meta down" />
   </action>
