@@ -4,7 +4,8 @@ ifeq ($(UNAME),Darwin)
 PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm2017.1
 endif
 ifeq ($(UNAME),Linux)
-PHPSTORMDIR := ${HOME}/.PhpStorm2017.1/config
+PHPSTORMDIR := ${HOME}/.PhpStorm2017.2/config
+WEBSTORMDIR := ${HOME}/.WebStorm2017.1/config
 endif
 
 home: ## install dotfiles
@@ -25,6 +26,8 @@ ifeq ($(UNAME),Darwin)
 	ln -vsf ${PWD}/etc/local.conf /usr/local/etc/dovecot/local.conf
 endif
 ifeq ($(UNAME),Linux)
+	sudo ln -vsf ${PWD}/etc/vhosts.conf /etc/nginx/conf.d/vhosts.conf
+	sudo ln -vsf ${PWD}/etc/local.conf /etc/dovecot/local.conf
 endif
 
 vim: ## install vim configuration
@@ -53,6 +56,10 @@ tmux: ## tmux plugin and configuration
 phpstorm: ## install phpStorm colors and keymaps
 	ln -vsf ${PWD}/phpstorm/colors ${PHPSTORMDIR}/colors
 	ln -vsf ${PWD}/phpstorm/keymaps ${PHPSTORMDIR}/keymaps
+ifeq ($(UNAME),Linux)
+	ln -vsf ${PWD}/phpstorm/colors ${WEBSTORMDIR}/colors
+	ln -vsf ${PWD}/phpstorm/keymaps ${WEBSTORMDIR}/keymaps
+endif
 
 all: home zsh vim etc
 
