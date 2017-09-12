@@ -1,7 +1,7 @@
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME),Darwin)
-PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm2017.1
+PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm2017.2
 endif
 ifeq ($(UNAME),Linux)
 PHPSTORMDIR := ${HOME}/.PhpStorm2017.1/config
@@ -40,8 +40,8 @@ clean: ## cleanup system
 ifeq ($(UNAME),Darwin)
 	rm -rf ${HOME}/Library/Caches
 	rm -rf "${HOME}/Library/Application Support/MobileSync/Backup/*"
-	#rm -rf /Library/Caches
-	#rm -rf /System/Library/Caches
+	sudo rm -rf /Library/Caches
+	sudo rm -rf /System/Library/Caches
 	test -x "$(shell command -v brew)" || brew cleanup
 endif
 	test -x "$(shell command -v npm)" || npm cache clean
