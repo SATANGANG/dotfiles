@@ -1,11 +1,15 @@
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME),Darwin)
-PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm2017.2
+PHPSTORM_LAST_VERSION := $(ls -a $HOME/Library/Preferences/ | grep PhpStorm | tail -n 1 | sed s/\.PhpStorm//)
+PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm$(PHPSTORM_LAST_VERSION)
 endif
+
 ifeq ($(UNAME),Linux)
-PHPSTORMDIR := ${HOME}/.PhpStorm2017.2/config
-WEBSTORMDIR := ${HOME}/.WebStorm2017.1/config
+PHPSTORM_LAST_VERSION := $(shell ls -a $(HOME) | grep PhpStorm | tail -n 1 | sed s/\.PhpStorm//)
+WEBSTORM_LAST_VERSION := $(shell ls -a $(HOME) | grep WebStorm | tail -n 1 | sed s/\.WebStorm//)
+PHPSTORMDIR := ${HOME}/.PhpStorm${PHPSTORM_LAST_VERSION}/config
+WEBSTORMDIR := ${HOME}/.WebStorm${WEBSTORM_LAST_VERSION}/config
 endif
 
 home: ## install dotfiles
@@ -54,11 +58,11 @@ tmux: ## tmux plugin and configuration
 	ln -vsf ${PWD}/home/.tmux.conf   ${HOME}/.tmux.conf
 
 phpstorm: ## install phpStorm colors and keymaps
-	ln -vsf ${PWD}/phpstorm/colors ${PHPSTORMDIR}/colors
-	ln -vsf ${PWD}/phpstorm/keymaps ${PHPSTORMDIR}/keymaps
+	rm -rf ${PHPSTORMDIR}/colors && ln -vsf ${PWD}/phpstorm/colors ${PHPSTORMDIR}/colors
+	rm -rf ${PHPSTORMDIR}/keymaps && ln -vsf ${PWD}/phpstorm/keymaps ${PHPSTORMDIR}/keymaps
 ifeq ($(UNAME),Linux)
-	ln -vsf ${PWD}/phpstorm/colors ${WEBSTORMDIR}/colors
-	ln -vsf ${PWD}/phpstorm/keymaps ${WEBSTORMDIR}/keymaps
+	rm -rf ${WEBSTORMDIR}/colors && ln -vsf ${PWD}/phpstorm/colors ${WEBSTORMDIR}/colors
+	rm -rf ${WEBSTORMDIR}/keymaps && ln -vsf ${PWD}/phpstorm/keymaps ${WEBSTORMDIR}/keymaps
 endif
 
 all: home zsh vim etc
