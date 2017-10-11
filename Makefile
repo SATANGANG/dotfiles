@@ -42,6 +42,7 @@ vim: ## install vim configuration
 	ln -vsf ${PWD}/home/.vimrc ${HOME}/.vimrc
 	mkdir -p ${HOME}/.config/nvim
 	ln -vsf ${HOME}/.vim/init.vim   ${HOME}/.config/nvim/init.vim
+	ln -vsf ${HOME}/.vim/colors   ${HOME}/.config/nvim/colors
 
 clean: ## cleanup system
 ifeq ($(UNAME),Darwin)
@@ -65,7 +66,7 @@ ifeq ($(UNAME),Linux)
 	rm -rf ${WEBSTORMDIR}/keymaps && ln -vsf ${PWD}/phpstorm/keymaps ${WEBSTORMDIR}/keymaps
 endif
 
-all: home zsh vim etc
+all: home zsh vim etc tmux phpstorm
 
 .PHONY: all home vim etc zsh phpstorm clean
 
