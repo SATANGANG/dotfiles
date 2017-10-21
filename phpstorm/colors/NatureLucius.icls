@@ -1,8 +1,14 @@
 <scheme name="NatureLucius" version="142" parent_scheme="Default">
   <option name="FONT_SCALE" value="1.5" />
-  <option name="LINE_SPACING" value="1.1" />
-  <option name="EDITOR_FONT_SIZE" value="17" />
-  <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+  <option name="LINE_SPACING" value="1.2" />
+  <font>
+    <option name="EDITOR_FONT_NAME" value="Menlo" />
+    <option name="EDITOR_FONT_SIZE" value="17" />
+  </font>
+  <font>
+    <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+    <option name="EDITOR_FONT_SIZE" value="17" />
+  </font>
   <colors>
     <option name="ANNOTATIONS_COLOR" value="1f1f1f" />
     <option name="ANNOTATIONS_MERGED_COLOR" value="" />

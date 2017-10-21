@@ -46,7 +46,9 @@
   <action id="EditorResetFontSize">
     <keyboard-shortcut first-keystroke="ctrl 0" />
   </action>
-  <action id="EditorSelectWord" />
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="alt w" />
+  </action>
   <action id="EditorToggleInsertState" />
   <action id="ExpandAll">
     <keyboard-shortcut first-keystroke="ctrl add" />
