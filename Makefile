@@ -53,6 +53,13 @@ ifeq ($(UNAME),Darwin)
 	test -x "$(shell command -v brew)" || brew cleanup
 endif
 	test -x "$(shell command -v npm)" || npm cache clean
+ifeq ($(UNAME),Linux)
+	# Remove obsolete configuration files
+	# http://ccm.net/faq/8269-ubuntu-cleaning-up-configuration-residue-packages
+	# sudo dpkg --purge $(COLUMNS=200 dpkg -l | grep "^rc" | tr -s ' ' | cut -d ' ' -f 2)
+	# https://askubuntu.com/questions/104126/can-i-purge-configuration-files-after-ive-removed-the-package
+	dpkg --purge `dpkg --get-selections | grep deinstall | cut -f1`
+endif
 	
 tmux: ## tmux plugin and configuration
 	test -d ${HOME}/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
