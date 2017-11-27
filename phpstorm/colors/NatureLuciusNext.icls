@@ -4,12 +4,18 @@
     <property name="created">2017-05-04T18:24:50</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2017.1.3.0.0</property>
-    <property name="modified">2017-09-07T20:10:02</property>
+    <property name="modified">2017-11-17T15:20:37</property>
     <property name="originalScheme">NatureLucius copy</property>
   </metaInfo>
-  <option name="LINE_SPACING" value="1.1" />
-  <option name="EDITOR_FONT_SIZE" value="17" />
-  <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+  <option name="LINE_SPACING" value="1.2" />
+  <font>
+    <option name="EDITOR_FONT_NAME" value="Menlo" />
+    <option name="EDITOR_FONT_SIZE" value="17" />
+  </font>
+  <font>
+    <option name="EDITOR_FONT_NAME" value="DejaVu Sans Mono" />
+    <option name="EDITOR_FONT_SIZE" value="17" />
+  </font>
   <colors>
     <option name="ANNOTATIONS_COLOR" value="1f1f1f" />
     <option name="ANNOTATIONS_MERGED_COLOR" value="" />
@@ -271,15 +277,14 @@
     <option name="DEFAULT_INSTANCE_FIELD" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="800000" />
+        <option name="FOREGROUND" value="7f0000" />
       </value>
     </option>
     <option name="DEFAULT_LABEL" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="DEFAULT_METADATA" baseAttributes="TEXT" />
     <option name="DEFAULT_NUMBER">
       <value>
-        <option name="FOREGROUND" value="5a8c28" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="354f16" />
       </value>
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL" baseAttributes="DEFAULT_IDENTIFIER" />
@@ -287,8 +292,7 @@
     <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="5a8c28" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="354f16" />
       </value>
     </option>
     <option name="DEFAULT_TAG" baseAttributes="TEXT" />
@@ -491,12 +495,6 @@
         <option name="EFFECT_COLOR" value="c8a1a1" />
       </value>
     </option>
-    <option name="JS.KEYWORD">
-      <value>
-        <option name="FOREGROUND" value="821e5a" />
-        <option name="FONT_TYPE" value="1" />
-      </value>
-    </option>
     <option name="JS.LINE_COMMENT">
       <value>
         <option name="FOREGROUND" value="808080" />
@@ -528,12 +526,6 @@
       <value>
         <option name="FOREGROUND" value="325a8c" />
         <option name="FONT_TYPE" value="2" />
-      </value>
-    </option>
-    <option name="JS.STRING">
-      <value>
-        <option name="FOREGROUND" value="5a8c28" />
-        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="JS.VALID_STRING_ESCAPE">
@@ -654,7 +646,6 @@
     <option name="PHP_OPERATION_SIGN">
       <value />
     </option>
-    <option name="PHP_PARAMETER" baseAttributes="DEFAULT_PARAMETER" />
     <option name="PHP_PARENTHESES">
       <value />
     </option>
@@ -687,7 +678,6 @@
         <option name="FOREGROUND" value="c1f32" />
       </value>
     </option>
-    <option name="PHP_VAR" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="REGEXP.BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="800000" />
@@ -1004,12 +994,12 @@
     <option name="YAML_SCALAR_DSTRING">
       <value>
         <option name="FOREGROUND" value="0" />
+        <option name="BACKGROUND" value="f5f6da" />
       </value>
     </option>
     <option name="YAML_SCALAR_KEY">
       <value>
-        <option name="FOREGROUND" value="8c5a28" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="0" />
       </value>
     </option>
     <option name="YAML_SCALAR_LIST">
@@ -1021,6 +1011,7 @@
     <option name="YAML_SCALAR_STRING">
       <value>
         <option name="FOREGROUND" value="0" />
+        <option name="BACKGROUND" value="f5f6da" />
       </value>
     </option>
     <option name="YAML_SCALAR_VALUE">
@@ -1034,6 +1025,7 @@
     <option name="YAML_TEXT">
       <value>
         <option name="FOREGROUND" value="0" />
+        <option name="BACKGROUND" value="f5f6da" />
       </value>
     </option>
   </attributes>
