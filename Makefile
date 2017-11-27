@@ -1,8 +1,8 @@
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME),Darwin)
-PHPSTORM_LAST_VERSION := $(ls -a $HOME/Library/Preferences/ | grep PhpStorm | tail -n 1 | sed s/\.PhpStorm//)
-PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm$(PHPSTORM_LAST_VERSION)
+PHPSTORM_LAST_VERSION := $(shell ls -a ${HOME}/Library/Preferences/ | grep PhpStorm\\d\\+ | tail -n 1 | sed s/PhpStorm//)
+PHPSTORMDIR := ${HOME}/Library/Preferences/PhpStorm${PHPSTORM_LAST_VERSION}
 endif
 
 ifeq ($(UNAME),Linux)
